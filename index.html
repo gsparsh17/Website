@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        background-color: black;
+        height: 1000px;
+    }
+    header::before{
+        background-color: black;
+        background-image: url('271679.jpg');
+        content: "";
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        opacity: 0.9;
+        transform: scaleX(-1);
+    }
+    .nav{
+        display: flex;
+        font-weight: bold;
+        color: azure;
+        font-family: cursive;
+        border-radius: 20rem;
+        background-color: black;
+        width: 100%;
+        height: 3rem;
+        opacity: 0.75;
+        margin: 5px;
+        align-items: center;
+        flex-direction: row;
+        position: sticky;
+        z-index: 10;
+
+    }
+    .index{
+        display: inline-block;   
+        padding: 1rem;
+        margin: 0px;
+    }
+    #profile{
+        display: block;
+        margin-left: 20px;
+        margin-top: 3px;
+    }
+    .order{
+        list-style: none;
+        margin: 5rem;
+        opacity: 1;
+        margin-left: 0px;
+    }
+    ul li a{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    ul li a:hover{
+       background-color:blueviolet;
+       border-radius: 10px;
+    }
+    .dailogue{
+        color: aqua;
+        background-color: black;
+        width: 90px;
+        padding: 6px;
+        padding-right: 5px;  
+        padding-left: 5px;     
+        padding-top: 15px;
+        padding-bottom: 12px;
+        text-align: center;
+        position: relative;
+        left: -3px;
+        border-radius: 5px;
+        font-size: 14px;
+        border-bottom: 1px solid grey;
+
+    }
+    .dropdown{
+        display: none;
+        flex-direction: column;
+        margin: 0px;
+        list-style: none;
+        position: absolute;
+        padding: 0px;
+        z-index: -1;
+        border-radius: 20px;
+    }
+    ul li:hover div ul{
+      display: flex;
+    }
+    .head{
+        font-weight: bold;
+        color: azure;
+        font-family:cursive;
+        text-align: center;
+        width: 80%;
+        margin:auto;
+    }
+    div p a{
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 8px;
+        font-size: 17px;
+    }
+    div p a:hover{
+        background-color: blueviolet;
+        padding: 8px;
+        font-size: 17px;
+    }
+    .side1{
+        height: 105px;
+        width: 130px;
+        border: 2px solid none;
+        background-color: cyan;
+        border-radius: 0px 20px 20px 0px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2px;
+        border-left: 2px solid none;
+        display: block;
+        background-image: url("Untitled-3.jpg");
+        background-size: cover;
+        box-shadow: 0px 5px aqua;
+    }
+    #sign{
+        position: relative;
+        top: 10px;
+    }
+    .side1:hover{
+        width: 210px;
+        align-items: flex-end;
+    }
+    .side1:hover #sign{
+       display: none;
+    }
+    .side1:hover #im{
+       position: relative;
+       left: 12px;   
+    }
+    .button{
+        display: none;
+        position: relative;
+        left: 6px;
+        border: 2px solid blueviolet;
+        color: blueviolet;
+        border-radius: 10px;
+       padding: 5px;
+    }
+    .side1:hover .button{
+        display: inline;
+    }
+    #btn{
+        text-decoration: none;
+        font-family: cursive;
+        font-weight: bold;
+    }
+    .button:hover{
+        background-color: thistle;
+    }
+    .button2{
+     margin-left: ;
+     margin-right: 0px;
+     border-radius: 15px 0px 0px 15px;
+     position: relative;
+     bottom: 100px;
+     height: 105px;
+        width: 130px;
+        border: 2px solid none;
+        background-color: cyan;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-image: url("Untitled-3.jpg");
+        background-size: cover;
+        box-shadow: 2px 4px 2px 2px aqua;
+        
+    }
+    .side4{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .button2:hover{
+        margin-left: 80%;
+        width: 230px;
+    }
+    .button2:hover #im2{
+     position: relative;
+     right: 1px;
+    }
+    .button3{
+        position: relative;
+        right: 15px;
+        margin-left: -0.5rem;
+    }
+    .button2:hover #sign2{
+        display: none;
+    }
+    .button2:hover .button3{
+        display: inline;
+    }
+    #sign2{
+        position: relative;
+        top: 10px;
+        left: 4px;
+    }
+    .services{
+       
+        display: flex;
+        
+    }
+    .bg{
+        background-image: url('download.jpg');
+        content: "";
+        background-size: ;
+        position: absolute;
+        width: 100%;
+        height: 650px;
+        z-index: -1;
+        opacity: 0.5;
+        top: 40px;
+        left: 0px;
+    }
+    .box{
+        border: 3px solid rgb(196, 5, 5);
+        width: 250px;
+        height: 300px;
+        margin: 25px;
+        position: relative;
+        left: 60px;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        background-color: rgb(252, 229, 233);
+        opacity: 0.8;
+    }
+    .para{
+        justify-content: center;
+        color: black;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        display: inline-block;
+        background-color: white;
+        height: 690px;
+        position: relative;
+        top: -80px;
+        font-size: 30px;
+        font-family: cursive;
+        font-weight: bold;
+        z-index: 5;
+    }
+    .ara3{
+        font-size: 20px;
+        text-decoration: none;
+        opacity: 1;
+    }
+    
+    .heading{
+        
+        color:blueviolet;
+        z-index: ;
+        font-size: 35px;
+        display: inline=block;
+        text-shadow: 2px 2px cyan;
+    }
+    .sec2{
+        background-image: url("Untitled-1.jpg");
+        content: "";
+        background-size: cover;
+        position:relative;
+        width: 100%;
+        height: 700px;
+        z-index: -1;
+        top: -80px;
+        margin-bottom: ;
+    }
+    .ul{
+        text-decoration: none;
+        color: blueviolet;
+    }
+    .ul:hover{
+        background-color: ;
+        color: blueviolet;
+        font-size: 20px;
+        text-shadow: 2px 2px cyan;
+    }
+    .heading4{
+        text-align: center;
+        font-weight: bold;
+        font-family: cursive;
+        text-shadow: 2px 2px cyan;
+        color: blueviolet;
+    }
+    .boxes{
+       border: 3px solid red;
+       display: flex;
+       height: 100px;
+       flex-direction: column;
+       width: 80%;
+       align-items: center;
+       margin-left: 100px;
+       margin-top: 60px;
+       border-radius: 20px;
+       background-color: rgb(252, 229, 233);;
+       opacity: 0.6;
+    }
+    .flex{
+        align-items: center;
+        text-align: center;
+        
+    }
+    #a2{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: blueviolet;
+    }
+    #a2:hover{
+        color: blueviolet;
+        background-color: cyan;
+        border-radius: 10px;
+        padding: 3px;
+    }
+    .boxes a{
+        text-decoration: none;
+        color:rebeccapurple;
+    }
+    .boxes h1{
+        font-size: 20px;
+        margin: 0px;
+        margin-top: 4px;
+        font-weight: bold;
+        color: darkblue;
+    }
+</style>
+<body>
+    <header></header>
+        <div class="nav">
+            <div id="profile">
+                <img height="45px" width="55px" src="Restaurant-logo-template-on-transparent-background-PNG.png" alt="">
+            </div>
+        <ul class="order">
+            <li class="index"><i class="fa fa-home"></i><a href="#home"> Home</a></li>
+            <li class="index ser"> <a href="#services" id="ser"> Services&nbsp;<i class="fa fa-angle-down"></i></a> 
+                <div>
+                    <ul class="dropdown">
+                        <li class="dailogue"><a href="">Cattering</a> </li>
+                        <li class="dailogue"><a href="">Booking</a></li>
+                        <li class="dailogue"><a href="">Packaging</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="index"><a href="#about">AboutUs&nbsp;<i class="fa fa-angle-down"></i></a>
+                <div>
+                    <ul class="dropdown">
+                        <li class="dailogue"><a href="">Mission</a> </li>
+                        <li class="dailogue"><a href="">Vission</a></li>
+                        <li class="dailogue"><a href="">Team</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="index"><a href="#contact"> Contact&nbsp;<i class="fa fa-angle-down"></i></a>
+                <div>
+                    <ul class="dropdown">
+                        <li class="dailogue"><a href="">Phone</a> </li>
+                        <li class="dailogue"><a href="">Help</a></li>
+                        <li class="dailogue"><a href="">Address</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div class="head">
+       <p style="font-size: 40px;"> Welcome to MyOnlineMeal </p>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum neque vel excepturi, laboriosam reprehenderit animi sunt nobis id minima. Velit inventore repellendus debitis veritatis sequi laborum suscipit distinctio, ex laudantium!</p>
+       <br>
+       <p><a href="">Order Now</a></p>
+    </div>
+   <div class="side1">
+      <span class="button"><a id="btn" href=""> Click Here</a></span><a href=""><img id="im" src="5a2a4f8fec9df9.9805035315127223199692.png" alt="" height="100px" width="100px">&nbsp;<i id="sign" class="fa fa-angle-right fa-3x"></i></a> 
+   </div>
+   <div class="side4">
+   <div class="button2">
+    <i id="sign2" class="fa fa-angle-left fa-3x"></i><a href=""><img id="im2" src="pngegg.png" alt="" height="100px" width="100px"></a> <span class="button button3"><a id="btn" href=""> Click Here</a></span>
+   </div>
+   </div>
+   <div class="para">
+       <div class="bg"></div>
+       <div class="heading"><br><br><div>Our Services</div><br></div>
+   <div class="services">   
+       <div class="box">
+           <a class="ul" href=""><img class="img3" src="pngfind.com-cooking-clipart-png-4604003.png" alt="" height="100px" width="100px">
+            <p class="ara3">Cattering</p></a>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sed voluptatibus deleniti sapiente minus.</p>
+       </div>
+       <div class="box">
+           <a class="ul" href=""><img class="img3" src="kisspng-pizza-meal-delivery-service-online-food-ordering-r-delivery-5ac0894faddf57.5576180015225675037122.png" alt="" height="100px" width="100px"><p class="ara3">Delivery</p></a>
+           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sed voluptatibus deleniti sapiente minus.</p>
+       </div>
+       <div class="box">
+           <a class="ul" href=""><img class="img3" src="kisspng-food-shopping-bag-grocery-store-shopping-paper-bag-of-food-5aa41005c6e964.6757976715207014458148.png" alt="" height="100px" width="100px"><p class="ara3">Packaging</p></a>
+           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sed voluptatibus deleniti sapiente minus.</p>
+       </div>
+   </div></div>
+   <div class="sec2">
+       <br><br>
+       <h1 class="heading4">New Dishes & Recipies Blogs</h1>
+       <div class="flex">
+           <div class="boxes">
+            <h1>Turkey Carcass Soup</h1>   
+            <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde blanditiis inventore consectetur tenetur delectus atque veniam inventore velit! Quaerat!.....</p></a>
+           </div>
+           <div class="boxes">
+            <h1>Peppermint Meringue</h1>   
+            <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo possimus inventore consectetur tenetur delectus atque neque eveniet ratione tempore.....</p></a>
+           </div>
+           <div class="boxes">
+            <h1>Turkey Casserole</h1>   
+            <a href=""><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit inventore consectetur tenetur delectus atque inventore consectetur tenetur delectus atque....</p></a>
+           </div>
+           <br>
+          <a id="a2" href=""> Click Here For More...</a>
+       </div>
+   </div>
+</body>
+
+</html>
